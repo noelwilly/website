@@ -1,0 +1,503 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  z-index: 10;
+  width: 500px;
+  margin: auto;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+#screen {
+  width: 100%;
+  aspect-ratio: 16/9;
+  position: relative;
+  overflow: hidden;
+  container-type: inline-size;
+}
+
+/* index */
+#pitch_container {
+  position: absolute;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  top: 35%;
+  left: 32%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(0, 93, 0);
+  font-size: 1cqw;
+}
+
+#game {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* SPIL START */
+#start {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  top: 0%;
+  left: 0%;
+  background-image: url(../svg/startboard.svg);
+}
+
+#start_txt {
+  position: absolute;
+  top: 60%;
+  left: 29%;
+  font-size: 1.3cqw;
+  font-family: monospace;
+}
+
+#start_knap {
+  width: 30%;
+  position: absolute;
+  background-size: cover;
+  top: 20%;
+  left: 34.5%;
+  aspect-ratio: 256/110;
+  background-image: url(../svg/start.svg);
+  cursor: pointer;
+  animation-name: puls_kf;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+@keyframes puls_kf {
+  100% {
+    scale: 1.2;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+/* SPIL SLUT L */
+#game_over {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  top: 0%;
+  left: 0%;
+  background-image: url(../svg/lscreen.svg);
+}
+
+#game_over_txt {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 31%;
+  left: 39%;
+  color: red;
+  font-size: 5cqw;
+}
+
+#game_over_points {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 40%;
+  left: 43%;
+  font-size: 2cqw;
+}
+
+#genstart1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding-top: 0.3%;
+  padding-left: 0.7%;
+  max-width: 6%;
+  max-height: 3%;
+  top: 46%;
+  left: 48.2%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 8);
+  font-size: 1.2cqw;
+  cursor: pointer;
+}
+
+/* SPIL SLUT W */
+#level_complete {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  top: 0%;
+  left: 0%;
+  background-image: url(../svg/wscreen.svg);
+}
+
+#level_complete_txt {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 31%;
+  left: 39%;
+  color: green;
+  font-size: 5cqw;
+}
+
+#level_complete_points {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 40%;
+  left: 41.1%;
+  font-size: 2cqw;
+}
+
+#genstart2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding-top: 0.3%;
+  padding-left: 0.7%;
+  max-width: 7%;
+  max-height: 3%;
+  top: 46%;
+  left: 46.5%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 8);
+  font-size: 1.3cqw;
+  cursor: pointer;
+}
+
+#game_background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../svg/Background.svg");
+  background-size: cover;
+}
+#game_elements {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#title_container {
+  position: absolute;
+  width: 60%;
+  aspect-ratio: 660/140;
+  top: 15%;
+  left: 21%;
+}
+#title_sprite {
+  background-image: url(../svg/title3.svg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+#pelle_container {
+  position: absolute;
+  width: 15%;
+  aspect-ratio: 338/674;
+  top: 38%;
+  left: 13%;
+}
+#pelle_sprite {
+  background-image: url("../svg/pelle.svg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+#pill_container1,
+#pill_container2 {
+  position: absolute;
+  width: 5%;
+  aspect-ratio: 110/139;
+  top: 37%;
+}
+
+#pill_container3,
+#pill_container4 {
+  position: absolute;
+  width: 5%;
+  aspect-ratio: 105/139;
+  top: 37%;
+}
+
+#pill_sprite1 {
+  background-image: url("../svg/pill.svg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+#pill_sprite2 {
+  background-image: url("../svg/Artboard\ 34.svg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+#pill_sprite3 {
+  background-image: url("../svg/Artboard\ 33.svg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+#pill_sprite4 {
+  background-image: url("../svg/Artboard\ 31.svg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+#pollen_container1 {
+  position: absolute;
+  aspect-ratio: 1.1/1;
+  width: 7%;
+  top: 49%;
+}
+#pollen_sprite1 {
+  background-image: url("../svg/pollen.svg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+#pollen_container2 {
+  position: absolute;
+  aspect-ratio: 7/7;
+  width: 8%;
+  top: 38%;
+}
+#pollen_sprite2 {
+  background-image: url("../svg/pollen_flower.svg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+#game_foreground {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  pointer-events: none;
+}
+
+/* UI */
+#game_ui {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+#time_container {
+  width: 5%;
+  aspect-ratio: 1/5;
+  border: solid;
+  top: 50%;
+  left: 50%;
+}
+
+#time_sprite {
+  width: 100%;
+  height: 100%;
+  transform-origin: bottom;
+}
+
+#time_board {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 35%;
+  left: 1%;
+}
+
+#score_board {
+  width: 3%;
+  position: absolute;
+  background-size: cover;
+  top: 19%;
+  left: 2%;
+  aspect-ratio: 110/140;
+  background-image: url(../svg/pill.svg);
+}
+
+#point {
+  width: 55%;
+  position: absolute;
+  top: 21%;
+  left: 30%;
+  font-size: 1cqw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#life_board {
+  width: 5%;
+  position: absolute;
+  background-size: cover;
+  top: 26%;
+  left: 1%;
+  aspect-ratio: 640/575;
+  background-image: url(../svg/liv.svg);
+}
+
+#liv {
+  width: 53%;
+  position: absolute;
+  top: -7%;
+  left: 25%;
+  font-size: 3cqw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* GRAFIK */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #ccc;
+}
+
+.item p {
+  margin-top: 10px;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* ASSETLISTE */
+.container {
+  margin: 0 auto;
+  padding: 0px;
+  max-width: 800px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+article {
+  margin-bottom: 40px;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.pollen_container {
+  display: flex;
+  max-width: 30%;
+}
+
+.pellepolle_container {
+  display: flex;
+  max-width: 30%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* TEKNIK */
+.teknik {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.diagram1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.diagram1 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.diagram1tekst {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.diagram2tekst {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2,
+p {
+  margin: 0;
+}

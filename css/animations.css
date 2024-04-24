@@ -1,0 +1,168 @@
+.bouncing {
+  animation-name: bouncing_kf;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bouncing_kf {
+  from {
+    translate: 0 -5%;
+  }
+  to {
+    translate: 0 1%;
+  }
+}
+
+.falling {
+  animation-name: falling_kf;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes falling_kf {
+  0% {
+    translate: 0 -550%;
+  }
+  100% {
+    translate: 0 450%;
+    rotate: 1500deg;
+  }
+}
+
+.frys {
+  animation-play-state: paused;
+}
+
+.forsvind {
+  animation-name: forsvind_kf;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes forsvind_kf {
+  0% {
+    scale: 1;
+    opacity: 1;
+  }
+
+  20% {
+    scale: 1.2;
+  }
+
+  100% {
+    rotate: 360deg;
+    scale: 0;
+    opacity: 0;
+  }
+}
+
+.rotation {
+  animation-name: rotation_kf;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotation_kf {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: 180deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+.zoom_out {
+  animation-name: zoom_out_kf;
+  animation-duration: 5.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoom_out_kf {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 0;
+  }
+}
+
+/* position */
+.pos1 {
+  left: 15%;
+}
+
+.pos2 {
+  left: 25%;
+}
+
+.pos3 {
+  left: 35%;
+}
+
+.pos4 {
+  left: 40%;
+}
+
+.pos5 {
+  left: 50%;
+}
+
+.pos6 {
+  left: 65%;
+}
+
+.pos7 {
+  left: 70%;
+}
+
+.pos8 {
+  left: 80%;
+}
+
+/* delay */
+.delay1 {
+  animation-delay: 0s;
+}
+
+.delay2 {
+  animation-delay: 0.3s;
+}
+
+.delay3 {
+  animation-delay: 0.6s;
+}
+
+.delay4 {
+  animation-delay: 0.9s;
+}
+
+/* tid */
+.time {
+  animation-name: time_kf;
+  animation-duration: 30s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes time_kf {
+  0% {
+    transform: scaleY(1);
+    background-color: limegreen;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    transform: scaleY(0);
+    background-color: red;
+  }
+}
